@@ -7,12 +7,18 @@
 //
 
 #import "DOSAppDelegate.h"
+#import "DOSDataAPI.h"
 
 @implementation DOSAppDelegate
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
     // Override point for customization after application launch.
+    
+    DOSDataAPI *dataInstance = [[DOSDataAPI alloc] init];
+    NSLog(@"API Test: %@", [dataInstance helloWorld]);
+    
+    
     return YES;
 }
 							

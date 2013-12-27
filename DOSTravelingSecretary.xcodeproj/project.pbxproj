@@ -22,6 +22,7 @@
 		B115EB32186D10F300002237 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B115EB11186D10F300002237 /* UIKit.framework */; };
 		B115EB3A186D10F300002237 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = B115EB38186D10F300002237 /* InfoPlist.strings */; };
 		B115EB3C186D10F300002237 /* DOSTravelingSecretaryTests.m in Sources */ = {isa = PBXBuildFile; fileRef = B115EB3B186D10F300002237 /* DOSTravelingSecretaryTests.m */; };
+		B115EB4E186D127E00002237 /* libDOSDataAPI.a in Frameworks */ = {isa = PBXBuildFile; fileRef = B115EB4B186D11A900002237 /* libDOSDataAPI.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -31,6 +32,27 @@
 			proxyType = 1;
 			remoteGlobalIDString = B115EB09186D10F300002237;
 			remoteInfo = DOSTravelingSecretary;
+		};
+		B115EB4A186D11A900002237 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = B115EB45186D11A900002237 /* DOSDataAPI.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = B115EAD8186D0F6200002237;
+			remoteInfo = DOSDataAPI;
+		};
+		B115EB4C186D11A900002237 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = B115EB45186D11A900002237 /* DOSDataAPI.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = B115EAE8186D0F6200002237;
+			remoteInfo = DOSDataAPITests;
+		};
+		B115EB4F186D128900002237 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = B115EB45186D11A900002237 /* DOSDataAPI.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = B115EAD7186D0F6200002237;
+			remoteInfo = DOSDataAPI;
 		};
 /* End PBXContainerItemProxy section */
 
@@ -56,6 +78,7 @@
 		B115EB37186D10F300002237 /* DOSTravelingSecretaryTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "DOSTravelingSecretaryTests-Info.plist"; sourceTree = "<group>"; };
 		B115EB39186D10F300002237 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		B115EB3B186D10F300002237 /* DOSTravelingSecretaryTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DOSTravelingSecretaryTests.m; sourceTree = "<group>"; };
+		B115EB45186D11A900002237 /* DOSDataAPI.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = DOSDataAPI.xcodeproj; path = DOSDataAPI/DOSDataAPI.xcodeproj; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -63,6 +86,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B115EB4E186D127E00002237 /* libDOSDataAPI.a in Frameworks */,
 				B115EB10186D10F300002237 /* CoreGraphics.framework in Frameworks */,
 				B115EB12186D10F300002237 /* UIKit.framework in Frameworks */,
 				B115EB0E186D10F300002237 /* Foundation.framework in Frameworks */,
@@ -85,6 +109,7 @@
 		B115EB01186D10F300002237 = {
 			isa = PBXGroup;
 			children = (
+				B115EB45186D11A900002237 /* DOSDataAPI.xcodeproj */,
 				B115EB13186D10F300002237 /* DOSTravelingSecretary */,
 				B115EB35186D10F300002237 /* DOSTravelingSecretaryTests */,
 				B115EB0C186D10F300002237 /* Frameworks */,
@@ -157,6 +182,15 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
+		B115EB46186D11A900002237 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				B115EB4B186D11A900002237 /* libDOSDataAPI.a */,
+				B115EB4D186D11A900002237 /* DOSDataAPITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -171,6 +205,7 @@
 			buildRules = (
 			);
 			dependencies = (
+				B115EB50186D128900002237 /* PBXTargetDependency */,
 			);
 			name = DOSTravelingSecretary;
 			productName = DOSTravelingSecretary;
@@ -221,6 +256,12 @@
 			mainGroup = B115EB01186D10F300002237;
 			productRefGroup = B115EB0B186D10F300002237 /* Products */;
 			projectDirPath = "";
+			projectReferences = (
+				{
+					ProductGroup = B115EB46186D11A900002237 /* Products */;
+					ProjectRef = B115EB45186D11A900002237 /* DOSDataAPI.xcodeproj */;
+				},
+			);
 			projectRoot = "";
 			targets = (
 				B115EB09186D10F300002237 /* DOSTravelingSecretary */,
@@ -228,6 +269,23 @@
 			);
 		};
 /* End PBXProject section */
+
+/* Begin PBXReferenceProxy section */
+		B115EB4B186D11A900002237 /* libDOSDataAPI.a */ = {
+			isa = PBXReferenceProxy;
+			fileType = archive.ar;
+			path = libDOSDataAPI.a;
+			remoteRef = B115EB4A186D11A900002237 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		B115EB4D186D11A900002237 /* DOSDataAPITests.xctest */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.cfbundle;
+			path = DOSDataAPITests.xctest;
+			remoteRef = B115EB4C186D11A900002237 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+/* End PBXReferenceProxy section */
 
 /* Begin PBXResourcesBuildPhase section */
 		B115EB08186D10F300002237 /* Resources */ = {
@@ -277,6 +335,11 @@
 			isa = PBXTargetDependency;
 			target = B115EB09186D10F300002237 /* DOSTravelingSecretary */;
 			targetProxy = B115EB33186D10F300002237 /* PBXContainerItemProxy */;
+		};
+		B115EB50186D128900002237 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = DOSDataAPI;
+			targetProxy = B115EB4F186D128900002237 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -389,6 +452,7 @@
 				GCC_PREFIX_HEADER = "DOSTravelingSecretary/DOSTravelingSecretary-Prefix.pch";
 				INFOPLIST_FILE = "DOSTravelingSecretary/DOSTravelingSecretary-Info.plist";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				USER_HEADER_SEARCH_PATHS = "$(BUILT_PRODUCTS_DIR)/**";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -402,6 +466,7 @@
 				GCC_PREFIX_HEADER = "DOSTravelingSecretary/DOSTravelingSecretary-Prefix.pch";
 				INFOPLIST_FILE = "DOSTravelingSecretary/DOSTravelingSecretary-Info.plist";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				USER_HEADER_SEARCH_PATHS = "$(BUILT_PRODUCTS_DIR)/**";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;
