@@ -14,7 +14,6 @@
 		B115EB1A186D10F300002237 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = B115EB19186D10F300002237 /* main.m */; };
 		B115EB1E186D10F300002237 /* DOSAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = B115EB1D186D10F300002237 /* DOSAppDelegate.m */; };
 		B115EB21186D10F300002237 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B115EB1F186D10F300002237 /* Main.storyboard */; };
-		B115EB24186D10F300002237 /* DOSFirstViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B115EB23186D10F300002237 /* DOSFirstViewController.m */; };
 		B115EB27186D10F300002237 /* DOSSecondViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B115EB26186D10F300002237 /* DOSSecondViewController.m */; };
 		B115EB29186D10F300002237 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B115EB28186D10F300002237 /* Images.xcassets */; };
 		B115EB30186D10F300002237 /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B115EB2F186D10F300002237 /* XCTest.framework */; };
@@ -23,6 +22,30 @@
 		B115EB3A186D10F300002237 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = B115EB38186D10F300002237 /* InfoPlist.strings */; };
 		B115EB3C186D10F300002237 /* DOSTravelingSecretaryTests.m in Sources */ = {isa = PBXBuildFile; fileRef = B115EB3B186D10F300002237 /* DOSTravelingSecretaryTests.m */; };
 		B115EB4E186D127E00002237 /* libDOSDataAPI.a in Frameworks */ = {isa = PBXBuildFile; fileRef = B115EB4B186D11A900002237 /* libDOSDataAPI.a */; };
+		B115EB8C186D1D9F00002237 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B115EB86186D1D5000002237 /* SystemConfiguration.framework */; };
+		B115EBB5186F080900002237 /* DOSTripsTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B115EBB4186F080900002237 /* DOSTripsTableViewController.m */; };
+		B115EBBB186F13E600002237 /* DOSTripDetailTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B115EBBA186F13E600002237 /* DOSTripDetailTableViewController.m */; };
+		B115EBF5186F1A6900002237 /* ARChromeActivity.strings in Resources */ = {isa = PBXBuildFile; fileRef = B115EBBE186F1A6900002237 /* ARChromeActivity.strings */; };
+		B115EBF6186F1A6900002237 /* ARChromeActivity.m in Sources */ = {isa = PBXBuildFile; fileRef = B115EBC1186F1A6900002237 /* ARChromeActivity.m */; };
+		B115EBF7186F1A6900002237 /* ARChromeActivity.png in Resources */ = {isa = PBXBuildFile; fileRef = B115EBC2186F1A6900002237 /* ARChromeActivity.png */; };
+		B115EBF8186F1A6900002237 /* ARChromeActivity@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = B115EBC3186F1A6900002237 /* ARChromeActivity@2x.png */; };
+		B115EBF9186F1A6900002237 /* ARChromeActivity@2x~ipad.png in Resources */ = {isa = PBXBuildFile; fileRef = B115EBC4186F1A6900002237 /* ARChromeActivity@2x~ipad.png */; };
+		B115EBFA186F1A6900002237 /* ARChromeActivity~ipad.png in Resources */ = {isa = PBXBuildFile; fileRef = B115EBC5186F1A6900002237 /* ARChromeActivity~ipad.png */; };
+		B115EBFB186F1A6900002237 /* EGYModalWebViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B115EBCA186F1A6900002237 /* EGYModalWebViewController.m */; };
+		B115EBFC186F1A6900002237 /* EGYWebViewController.bundle in Resources */ = {isa = PBXBuildFile; fileRef = B115EBCB186F1A6900002237 /* EGYWebViewController.bundle */; };
+		B115EBFD186F1A6900002237 /* EGYWebViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B115EBCD186F1A6900002237 /* EGYWebViewController.m */; };
+		B115EBFE186F1A6900002237 /* MLCruxActivity.strings in Resources */ = {isa = PBXBuildFile; fileRef = B115EBCF186F1A6900002237 /* MLCruxActivity.strings */; };
+		B115EBFF186F1A6900002237 /* MLCruxActivity.m in Sources */ = {isa = PBXBuildFile; fileRef = B115EBD4186F1A6900002237 /* MLCruxActivity.m */; };
+		B115EC00186F1A6900002237 /* MLCruxActivity.png in Resources */ = {isa = PBXBuildFile; fileRef = B115EBD5186F1A6900002237 /* MLCruxActivity.png */; };
+		B115EC01186F1A6900002237 /* MLCruxActivity@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = B115EBD6186F1A6900002237 /* MLCruxActivity@2x.png */; };
+		B115EC02186F1A6900002237 /* MLCruxActivity@2x~iPad.png in Resources */ = {isa = PBXBuildFile; fileRef = B115EBD7186F1A6900002237 /* MLCruxActivity@2x~iPad.png */; };
+		B115EC03186F1A6900002237 /* MLCruxActivity~iPad.png in Resources */ = {isa = PBXBuildFile; fileRef = B115EBD8186F1A6900002237 /* MLCruxActivity~iPad.png */; };
+		B115EC04186F1A6900002237 /* TUSafariActivity.strings in Resources */ = {isa = PBXBuildFile; fileRef = B115EBDA186F1A6900002237 /* TUSafariActivity.strings */; };
+		B115EC05186F1A6900002237 /* Safari.png in Resources */ = {isa = PBXBuildFile; fileRef = B115EBEB186F1A6900002237 /* Safari.png */; };
+		B115EC06186F1A6900002237 /* Safari@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = B115EBEC186F1A6900002237 /* Safari@2x.png */; };
+		B115EC07186F1A6900002237 /* Safari@2x~ipad.png in Resources */ = {isa = PBXBuildFile; fileRef = B115EBED186F1A6900002237 /* Safari@2x~ipad.png */; };
+		B115EC08186F1A6900002237 /* Safari~ipad.png in Resources */ = {isa = PBXBuildFile; fileRef = B115EBEE186F1A6900002237 /* Safari~ipad.png */; };
+		B115EC09186F1A6900002237 /* TUSafariActivity.m in Sources */ = {isa = PBXBuildFile; fileRef = B115EBF2186F1A6900002237 /* TUSafariActivity.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -68,8 +91,6 @@
 		B115EB1C186D10F300002237 /* DOSAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DOSAppDelegate.h; sourceTree = "<group>"; };
 		B115EB1D186D10F300002237 /* DOSAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DOSAppDelegate.m; sourceTree = "<group>"; };
 		B115EB20186D10F300002237 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		B115EB22186D10F300002237 /* DOSFirstViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DOSFirstViewController.h; sourceTree = "<group>"; };
-		B115EB23186D10F300002237 /* DOSFirstViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DOSFirstViewController.m; sourceTree = "<group>"; };
 		B115EB25186D10F300002237 /* DOSSecondViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DOSSecondViewController.h; sourceTree = "<group>"; };
 		B115EB26186D10F300002237 /* DOSSecondViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DOSSecondViewController.m; sourceTree = "<group>"; };
 		B115EB28186D10F300002237 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
@@ -79,6 +100,60 @@
 		B115EB39186D10F300002237 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		B115EB3B186D10F300002237 /* DOSTravelingSecretaryTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DOSTravelingSecretaryTests.m; sourceTree = "<group>"; };
 		B115EB45186D11A900002237 /* DOSDataAPI.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = DOSDataAPI.xcodeproj; path = DOSDataAPI/DOSDataAPI.xcodeproj; sourceTree = "<group>"; };
+		B115EB86186D1D5000002237 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
+		B115EBB3186F080900002237 /* DOSTripsTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DOSTripsTableViewController.h; sourceTree = "<group>"; };
+		B115EBB4186F080900002237 /* DOSTripsTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DOSTripsTableViewController.m; sourceTree = "<group>"; };
+		B115EBB9186F13E600002237 /* DOSTripDetailTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DOSTripDetailTableViewController.h; sourceTree = "<group>"; };
+		B115EBBA186F13E600002237 /* DOSTripDetailTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DOSTripDetailTableViewController.m; sourceTree = "<group>"; };
+		B115EBBF186F1A6900002237 /* ar */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ar; path = ar.lproj/ARChromeActivity.strings; sourceTree = "<group>"; };
+		B115EBC0186F1A6900002237 /* ARChromeActivity.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ARChromeActivity.h; sourceTree = "<group>"; };
+		B115EBC1186F1A6900002237 /* ARChromeActivity.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ARChromeActivity.m; sourceTree = "<group>"; };
+		B115EBC2186F1A6900002237 /* ARChromeActivity.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ARChromeActivity.png; sourceTree = "<group>"; };
+		B115EBC3186F1A6900002237 /* ARChromeActivity@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "ARChromeActivity@2x.png"; sourceTree = "<group>"; };
+		B115EBC4186F1A6900002237 /* ARChromeActivity@2x~ipad.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "ARChromeActivity@2x~ipad.png"; sourceTree = "<group>"; };
+		B115EBC5186F1A6900002237 /* ARChromeActivity~ipad.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "ARChromeActivity~ipad.png"; sourceTree = "<group>"; };
+		B115EBC6186F1A6900002237 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/ARChromeActivity.strings; sourceTree = "<group>"; };
+		B115EBC7186F1A6900002237 /* fr */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = fr; path = fr.lproj/ARChromeActivity.strings; sourceTree = "<group>"; };
+		B115EBC9186F1A6900002237 /* EGYModalWebViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EGYModalWebViewController.h; sourceTree = "<group>"; };
+		B115EBCA186F1A6900002237 /* EGYModalWebViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EGYModalWebViewController.m; sourceTree = "<group>"; };
+		B115EBCB186F1A6900002237 /* EGYWebViewController.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = EGYWebViewController.bundle; sourceTree = "<group>"; };
+		B115EBCC186F1A6900002237 /* EGYWebViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EGYWebViewController.h; sourceTree = "<group>"; };
+		B115EBCD186F1A6900002237 /* EGYWebViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EGYWebViewController.m; sourceTree = "<group>"; };
+		B115EBD0186F1A6900002237 /* ar */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ar; path = ar.lproj/MLCruxActivity.strings; sourceTree = "<group>"; };
+		B115EBD1186F1A6900002237 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/MLCruxActivity.strings; sourceTree = "<group>"; };
+		B115EBD2186F1A6900002237 /* fr */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = fr; path = fr.lproj/MLCruxActivity.strings; sourceTree = "<group>"; };
+		B115EBD3186F1A6900002237 /* MLCruxActivity.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MLCruxActivity.h; sourceTree = "<group>"; };
+		B115EBD4186F1A6900002237 /* MLCruxActivity.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MLCruxActivity.m; sourceTree = "<group>"; };
+		B115EBD5186F1A6900002237 /* MLCruxActivity.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = MLCruxActivity.png; sourceTree = "<group>"; };
+		B115EBD6186F1A6900002237 /* MLCruxActivity@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "MLCruxActivity@2x.png"; sourceTree = "<group>"; };
+		B115EBD7186F1A6900002237 /* MLCruxActivity@2x~iPad.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "MLCruxActivity@2x~iPad.png"; sourceTree = "<group>"; };
+		B115EBD8186F1A6900002237 /* MLCruxActivity~iPad.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "MLCruxActivity~iPad.png"; sourceTree = "<group>"; };
+		B115EBDB186F1A6900002237 /* ar */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ar; path = ar.lproj/TUSafariActivity.strings; sourceTree = "<group>"; };
+		B115EBDC186F1A6900002237 /* cs */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = cs; path = cs.lproj/TUSafariActivity.strings; sourceTree = "<group>"; };
+		B115EBDD186F1A6900002237 /* de */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = de; path = de.lproj/TUSafariActivity.strings; sourceTree = "<group>"; };
+		B115EBDE186F1A6900002237 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/TUSafariActivity.strings; sourceTree = "<group>"; };
+		B115EBDF186F1A6900002237 /* es */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = es; path = es.lproj/TUSafariActivity.strings; sourceTree = "<group>"; };
+		B115EBE0186F1A6900002237 /* eu */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = eu; path = eu.lproj/TUSafariActivity.strings; sourceTree = "<group>"; };
+		B115EBE1186F1A6900002237 /* fi */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = fi; path = fi.lproj/TUSafariActivity.strings; sourceTree = "<group>"; };
+		B115EBE2186F1A6900002237 /* fr */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = fr; path = fr.lproj/TUSafariActivity.strings; sourceTree = "<group>"; };
+		B115EBE3186F1A6900002237 /* it */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = it; path = it.lproj/TUSafariActivity.strings; sourceTree = "<group>"; };
+		B115EBE4186F1A6900002237 /* ja */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ja; path = ja.lproj/TUSafariActivity.strings; sourceTree = "<group>"; };
+		B115EBE5186F1A6900002237 /* ko */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ko; path = ko.lproj/TUSafariActivity.strings; sourceTree = "<group>"; };
+		B115EBE6186F1A6900002237 /* nl */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = nl; path = nl.lproj/TUSafariActivity.strings; sourceTree = "<group>"; };
+		B115EBE7186F1A6900002237 /* no */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = no; path = no.lproj/TUSafariActivity.strings; sourceTree = "<group>"; };
+		B115EBE8186F1A6900002237 /* pl */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = pl; path = pl.lproj/TUSafariActivity.strings; sourceTree = "<group>"; };
+		B115EBE9186F1A6900002237 /* pt */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = pt; path = pt.lproj/TUSafariActivity.strings; sourceTree = "<group>"; };
+		B115EBEA186F1A6900002237 /* ru */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ru; path = ru.lproj/TUSafariActivity.strings; sourceTree = "<group>"; };
+		B115EBEB186F1A6900002237 /* Safari.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Safari.png; sourceTree = "<group>"; };
+		B115EBEC186F1A6900002237 /* Safari@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Safari@2x.png"; sourceTree = "<group>"; };
+		B115EBED186F1A6900002237 /* Safari@2x~ipad.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Safari@2x~ipad.png"; sourceTree = "<group>"; };
+		B115EBEE186F1A6900002237 /* Safari~ipad.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Safari~ipad.png"; sourceTree = "<group>"; };
+		B115EBEF186F1A6900002237 /* sk */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = sk; path = sk.lproj/TUSafariActivity.strings; sourceTree = "<group>"; };
+		B115EBF0186F1A6900002237 /* sv */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = sv; path = sv.lproj/TUSafariActivity.strings; sourceTree = "<group>"; };
+		B115EBF1186F1A6900002237 /* TUSafariActivity.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TUSafariActivity.h; sourceTree = "<group>"; };
+		B115EBF2186F1A6900002237 /* TUSafariActivity.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TUSafariActivity.m; sourceTree = "<group>"; };
+		B115EBF3186F1A6900002237 /* vi */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = vi; path = vi.lproj/TUSafariActivity.strings; sourceTree = "<group>"; };
+		B115EBF4186F1A6900002237 /* zh_CN */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = zh_CN; path = zh_CN.lproj/TUSafariActivity.strings; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -86,6 +161,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B115EB8C186D1D9F00002237 /* SystemConfiguration.framework in Frameworks */,
 				B115EB4E186D127E00002237 /* libDOSDataAPI.a in Frameworks */,
 				B115EB10186D10F300002237 /* CoreGraphics.framework in Frameworks */,
 				B115EB12186D10F300002237 /* UIKit.framework in Frameworks */,
@@ -129,6 +205,7 @@
 		B115EB0C186D10F300002237 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				B115EB86186D1D5000002237 /* SystemConfiguration.framework */,
 				B115EB0D186D10F300002237 /* Foundation.framework */,
 				B115EB0F186D10F300002237 /* CoreGraphics.framework */,
 				B115EB11186D10F300002237 /* UIKit.framework */,
@@ -143,10 +220,13 @@
 				B115EB1C186D10F300002237 /* DOSAppDelegate.h */,
 				B115EB1D186D10F300002237 /* DOSAppDelegate.m */,
 				B115EB1F186D10F300002237 /* Main.storyboard */,
-				B115EB22186D10F300002237 /* DOSFirstViewController.h */,
-				B115EB23186D10F300002237 /* DOSFirstViewController.m */,
+				B115EBB3186F080900002237 /* DOSTripsTableViewController.h */,
+				B115EBB4186F080900002237 /* DOSTripsTableViewController.m */,
+				B115EBB9186F13E600002237 /* DOSTripDetailTableViewController.h */,
+				B115EBBA186F13E600002237 /* DOSTripDetailTableViewController.m */,
 				B115EB25186D10F300002237 /* DOSSecondViewController.h */,
 				B115EB26186D10F300002237 /* DOSSecondViewController.m */,
+				B115EBBC186F1A5000002237 /* Libraries */,
 				B115EB28186D10F300002237 /* Images.xcassets */,
 				B115EB14186D10F300002237 /* Supporting Files */,
 			);
@@ -189,6 +269,71 @@
 				B115EB4D186D11A900002237 /* DOSDataAPITests.xctest */,
 			);
 			name = Products;
+			sourceTree = "<group>";
+		};
+		B115EBBC186F1A5000002237 /* Libraries */ = {
+			isa = PBXGroup;
+			children = (
+				B115EBBD186F1A6900002237 /* ARChromeActivity */,
+				B115EBC8186F1A6900002237 /* EGYWebViewController */,
+				B115EBCE186F1A6900002237 /* MLCruxActivity */,
+				B115EBD9186F1A6900002237 /* TUSafariActivity */,
+			);
+			name = Libraries;
+			sourceTree = "<group>";
+		};
+		B115EBBD186F1A6900002237 /* ARChromeActivity */ = {
+			isa = PBXGroup;
+			children = (
+				B115EBBE186F1A6900002237 /* ARChromeActivity.strings */,
+				B115EBC0186F1A6900002237 /* ARChromeActivity.h */,
+				B115EBC1186F1A6900002237 /* ARChromeActivity.m */,
+				B115EBC2186F1A6900002237 /* ARChromeActivity.png */,
+				B115EBC3186F1A6900002237 /* ARChromeActivity@2x.png */,
+				B115EBC4186F1A6900002237 /* ARChromeActivity@2x~ipad.png */,
+				B115EBC5186F1A6900002237 /* ARChromeActivity~ipad.png */,
+			);
+			path = ARChromeActivity;
+			sourceTree = "<group>";
+		};
+		B115EBC8186F1A6900002237 /* EGYWebViewController */ = {
+			isa = PBXGroup;
+			children = (
+				B115EBC9186F1A6900002237 /* EGYModalWebViewController.h */,
+				B115EBCA186F1A6900002237 /* EGYModalWebViewController.m */,
+				B115EBCB186F1A6900002237 /* EGYWebViewController.bundle */,
+				B115EBCC186F1A6900002237 /* EGYWebViewController.h */,
+				B115EBCD186F1A6900002237 /* EGYWebViewController.m */,
+			);
+			path = EGYWebViewController;
+			sourceTree = "<group>";
+		};
+		B115EBCE186F1A6900002237 /* MLCruxActivity */ = {
+			isa = PBXGroup;
+			children = (
+				B115EBCF186F1A6900002237 /* MLCruxActivity.strings */,
+				B115EBD3186F1A6900002237 /* MLCruxActivity.h */,
+				B115EBD4186F1A6900002237 /* MLCruxActivity.m */,
+				B115EBD5186F1A6900002237 /* MLCruxActivity.png */,
+				B115EBD6186F1A6900002237 /* MLCruxActivity@2x.png */,
+				B115EBD7186F1A6900002237 /* MLCruxActivity@2x~iPad.png */,
+				B115EBD8186F1A6900002237 /* MLCruxActivity~iPad.png */,
+			);
+			path = MLCruxActivity;
+			sourceTree = "<group>";
+		};
+		B115EBD9186F1A6900002237 /* TUSafariActivity */ = {
+			isa = PBXGroup;
+			children = (
+				B115EBDA186F1A6900002237 /* TUSafariActivity.strings */,
+				B115EBEB186F1A6900002237 /* Safari.png */,
+				B115EBEC186F1A6900002237 /* Safari@2x.png */,
+				B115EBED186F1A6900002237 /* Safari@2x~ipad.png */,
+				B115EBEE186F1A6900002237 /* Safari~ipad.png */,
+				B115EBF1186F1A6900002237 /* TUSafariActivity.h */,
+				B115EBF2186F1A6900002237 /* TUSafariActivity.m */,
+			);
+			path = TUSafariActivity;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -252,6 +397,25 @@
 			knownRegions = (
 				en,
 				Base,
+				ar,
+				fr,
+				cs,
+				de,
+				es,
+				eu,
+				fi,
+				it,
+				ja,
+				ko,
+				nl,
+				no,
+				pl,
+				pt,
+				ru,
+				sk,
+				sv,
+				vi,
+				zh_CN,
 			);
 			mainGroup = B115EB01186D10F300002237;
 			productRefGroup = B115EB0B186D10F300002237 /* Products */;
@@ -294,7 +458,23 @@
 			files = (
 				B115EB29186D10F300002237 /* Images.xcassets in Resources */,
 				B115EB18186D10F300002237 /* InfoPlist.strings in Resources */,
+				B115EC01186F1A6900002237 /* MLCruxActivity@2x.png in Resources */,
+				B115EC05186F1A6900002237 /* Safari.png in Resources */,
+				B115EBF9186F1A6900002237 /* ARChromeActivity@2x~ipad.png in Resources */,
+				B115EC06186F1A6900002237 /* Safari@2x.png in Resources */,
+				B115EC03186F1A6900002237 /* MLCruxActivity~iPad.png in Resources */,
+				B115EC08186F1A6900002237 /* Safari~ipad.png in Resources */,
+				B115EBF8186F1A6900002237 /* ARChromeActivity@2x.png in Resources */,
+				B115EC04186F1A6900002237 /* TUSafariActivity.strings in Resources */,
+				B115EBF5186F1A6900002237 /* ARChromeActivity.strings in Resources */,
+				B115EC02186F1A6900002237 /* MLCruxActivity@2x~iPad.png in Resources */,
 				B115EB21186D10F300002237 /* Main.storyboard in Resources */,
+				B115EBFE186F1A6900002237 /* MLCruxActivity.strings in Resources */,
+				B115EC07186F1A6900002237 /* Safari@2x~ipad.png in Resources */,
+				B115EBFC186F1A6900002237 /* EGYWebViewController.bundle in Resources */,
+				B115EBFA186F1A6900002237 /* ARChromeActivity~ipad.png in Resources */,
+				B115EBF7186F1A6900002237 /* ARChromeActivity.png in Resources */,
+				B115EC00186F1A6900002237 /* MLCruxActivity.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -314,9 +494,15 @@
 			buildActionMask = 2147483647;
 			files = (
 				B115EB1A186D10F300002237 /* main.m in Sources */,
+				B115EC09186F1A6900002237 /* TUSafariActivity.m in Sources */,
+				B115EBF6186F1A6900002237 /* ARChromeActivity.m in Sources */,
+				B115EBFF186F1A6900002237 /* MLCruxActivity.m in Sources */,
+				B115EBBB186F13E600002237 /* DOSTripDetailTableViewController.m in Sources */,
+				B115EBFD186F1A6900002237 /* EGYWebViewController.m in Sources */,
 				B115EB27186D10F300002237 /* DOSSecondViewController.m in Sources */,
 				B115EB1E186D10F300002237 /* DOSAppDelegate.m in Sources */,
-				B115EB24186D10F300002237 /* DOSFirstViewController.m in Sources */,
+				B115EBB5186F080900002237 /* DOSTripsTableViewController.m in Sources */,
+				B115EBFB186F1A6900002237 /* EGYModalWebViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -366,6 +552,53 @@
 				B115EB39186D10F300002237 /* en */,
 			);
 			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		B115EBBE186F1A6900002237 /* ARChromeActivity.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				B115EBBF186F1A6900002237 /* ar */,
+				B115EBC6186F1A6900002237 /* en */,
+				B115EBC7186F1A6900002237 /* fr */,
+			);
+			name = ARChromeActivity.strings;
+			sourceTree = "<group>";
+		};
+		B115EBCF186F1A6900002237 /* MLCruxActivity.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				B115EBD0186F1A6900002237 /* ar */,
+				B115EBD1186F1A6900002237 /* en */,
+				B115EBD2186F1A6900002237 /* fr */,
+			);
+			name = MLCruxActivity.strings;
+			sourceTree = "<group>";
+		};
+		B115EBDA186F1A6900002237 /* TUSafariActivity.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				B115EBDB186F1A6900002237 /* ar */,
+				B115EBDC186F1A6900002237 /* cs */,
+				B115EBDD186F1A6900002237 /* de */,
+				B115EBDE186F1A6900002237 /* en */,
+				B115EBDF186F1A6900002237 /* es */,
+				B115EBE0186F1A6900002237 /* eu */,
+				B115EBE1186F1A6900002237 /* fi */,
+				B115EBE2186F1A6900002237 /* fr */,
+				B115EBE3186F1A6900002237 /* it */,
+				B115EBE4186F1A6900002237 /* ja */,
+				B115EBE5186F1A6900002237 /* ko */,
+				B115EBE6186F1A6900002237 /* nl */,
+				B115EBE7186F1A6900002237 /* no */,
+				B115EBE8186F1A6900002237 /* pl */,
+				B115EBE9186F1A6900002237 /* pt */,
+				B115EBEA186F1A6900002237 /* ru */,
+				B115EBEF186F1A6900002237 /* sk */,
+				B115EBF0186F1A6900002237 /* sv */,
+				B115EBF3186F1A6900002237 /* vi */,
+				B115EBF4186F1A6900002237 /* zh_CN */,
+			);
+			name = TUSafariActivity.strings;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
@@ -532,6 +765,7 @@
 				B115EB41186D10F300002237 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		B115EB42186D10F300002237 /* Build configuration list for PBXNativeTarget "DOSTravelingSecretaryTests" */ = {
 			isa = XCConfigurationList;
@@ -540,6 +774,7 @@
 				B115EB44186D10F300002237 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

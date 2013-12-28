@@ -15,10 +15,6 @@
 {
     // Override point for customization after application launch.
     
-    DOSDataAPI *dataInstance = [[DOSDataAPI alloc] init];
-    NSLog(@"API Test: %@", [dataInstance helloWorld]);
-    
-    
     return YES;
 }
 							
