@@ -33,7 +33,7 @@
     
     // Load travel details
     DOSSecretaryTravelDataManager *dataMan = [[DOSSecretaryTravelDataManager alloc] init];
-    [dataMan getSecretaryTravelDetailForItem:[NSString stringWithFormat:@"%@",parentTravelItem.itemId] page:0 success:^(NSArray *response){
+    [dataMan getSecretaryTravelDetailForItem:[NSString stringWithFormat:@"%@",parentTravelItem.itemId] withOptions:nil success:^(NSArray *response){
         
         self.travelDetailItems = response;
         [self.tableView reloadData];

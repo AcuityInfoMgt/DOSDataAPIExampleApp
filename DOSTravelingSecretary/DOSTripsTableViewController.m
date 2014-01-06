@@ -32,7 +32,7 @@
     [super viewDidLoad];
 
     DOSSecretaryTravelDataManager *dataMan = [[DOSSecretaryTravelDataManager alloc] init];
-    [dataMan getSecretaryTravelForPage:0 success:^(NSArray *response) {
+    [dataMan getSecretaryTravelWithOptions:nil success:^(NSArray *response) {
         
         self.tripItems = response;
         [self.tableView reloadData];
