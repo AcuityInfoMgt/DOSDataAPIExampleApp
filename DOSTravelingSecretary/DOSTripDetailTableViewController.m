@@ -8,6 +8,7 @@
 
 #import "DOSTripDetailTableViewController.h"
 #import "EGYModalWebViewController.h"
+#import "DOSSecretaryTravelDetailItem.h"
 
 @interface DOSTripDetailTableViewController ()
 

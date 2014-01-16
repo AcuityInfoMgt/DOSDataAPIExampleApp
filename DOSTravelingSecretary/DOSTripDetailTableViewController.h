@@ -8,6 +8,7 @@
 
 #import <UIKit/UIKit.h>
 #import "DOSDataAPI.h"
+#import "DOSSecretaryTravelItem.h"
 
 @interface DOSTripDetailTableViewController : UITableViewController
 
