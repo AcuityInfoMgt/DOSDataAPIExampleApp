@@ -52,9 +52,8 @@
         [newItemList addObjectsFromArray:response];
         
         self.tripItems = newItemList;
-        [self.tableView reloadData];
-        
         self.totalItemsInQueryResults = dataMan.recordCountReturned;
+        [self.tableView reloadData];
         
     } failure:^(NSError *error) {
         NSLog(@"API Query failed: %@",error);
