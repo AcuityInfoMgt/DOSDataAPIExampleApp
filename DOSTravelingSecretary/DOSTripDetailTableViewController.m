@@ -75,9 +75,12 @@
         cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:CellIdentifier];
     }
     
+    NSDateFormatter *dateFormatter = [[NSDateFormatter alloc] init];
+    [dateFormatter setDateStyle:NSDateFormatterShortStyle];
+    
     DOSSecretaryTravelDetailItem *item = self.travelDetailItems[indexPath.row];
     cell.textLabel.text = item.title;
-    cell.detailTextLabel.text = item.date;
+    cell.detailTextLabel.text = [dateFormatter stringFromDate:item.date];
     
     return cell;
 }

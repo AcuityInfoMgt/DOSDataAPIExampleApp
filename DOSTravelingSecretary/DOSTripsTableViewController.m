@@ -15,6 +15,7 @@
 @interface DOSTripsTableViewController ()
 
 @property (nonatomic, strong) NSArray *tripItems;
+@property (nonatomic, strong) NSArray *searchItems;
 @property (nonatomic, strong) NSNumber *currentPage;
 @property (nonatomic, strong) NSNumber *itemsPerPage;
 @property (nonatomic, strong) NSNumber *totalItemsInQueryResults;
@@ -27,6 +28,7 @@
 - (void)awakeFromNib
 {
     self.tripItems = [[NSArray alloc] init];
+    self.searchItems = [[NSArray alloc] init];
     self.currentPage = [NSNumber numberWithInt:0];
     self.itemsPerPage = [NSNumber numberWithInt:10];
     self.totalItemsInQueryResults = [NSNumber numberWithInt:0];
@@ -36,6 +38,12 @@
 {
     [super viewDidLoad];
     [self loadTripDataset];
+}
+
+- (BOOL)searchDisplayController:(UISearchDisplayController *)controller shouldReloadTableForSearchString:(NSString *)searchString
+{
+    [self loadTripDatasetForSearch:searchString];
+    return YES;
 }
 
 - (void)loadTripDataset
@@ -60,9 +68,23 @@
     }];
 }
 
-- (void)didReceiveMemoryWarning
+- (void)loadTripDatasetForSearch:(NSString *)searchString
 {
-    [super didReceiveMemoryWarning];
+    NSMutableDictionary *options = [[NSMutableDictionary alloc] init];
+    [options setObject:[NSNumber numberWithInt:100] forKey:DOSQueryArgPerPage];
+    [options setObject:[NSNumber numberWithInt:0] forKey:DOSQueryArgPage];
+    [options setObject:@"id,title,date_start,date_end" forKey:DOSQueryArgFields];
+    [options setObject:searchString forKey:DOSQueryArgTerms];
+    
+    DOSSecretaryTravelDataManager *dataMan = [[DOSSecretaryTravelDataManager alloc] init];
+    [dataMan getSecretaryTravelWithOptions:options success:^(NSArray *response) {
+        
+        self.searchItems = response;
+        [self.searchDisplayController.searchResultsTableView reloadData];
+        
+    } failure:^(NSError *error) {
+        NSLog(@"API Query failed: %@",error);
+    }];
 }
 
 #pragma mark - Table view data source
@@ -74,35 +96,62 @@
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
-    // If there are more items than currently displayed, add a cell for the "Load More..." indicator
-    if (self.tripItems.count < [self.totalItemsInQueryResults intValue]) {
-        return self.tripItems.count + 1;
+    if (tableView == self.tableView) {
+        // If there are more items than currently displayed, add a cell for the "Load More..." indicator
+        if (self.tripItems.count < [self.totalItemsInQueryResults intValue]) {
+            return self.tripItems.count + 1;
+        }
+        else {
+            return self.tripItems.count;
+        }
     }
-    else {
-        return self.tripItems.count;
+    else
+    {
+        return self.searchItems.count;
     }
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
     static NSString *CellIdentifier = @"TripItemCell";
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier forIndexPath:indexPath];
+    UITableViewCell *cell = [self.tableView dequeueReusableCellWithIdentifier:CellIdentifier forIndexPath:indexPath];
     
     if (!cell) {
         cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:CellIdentifier];
     }
     
-    if (indexPath.row < self.tripItems.count) {
+    if (tableView == self.tableView) {
+        if (indexPath.row < self.tripItems.count) {
+            NSDateFormatter *dateFormatter = [[NSDateFormatter alloc] init];
+            [dateFormatter setDateStyle:NSDateFormatterShortStyle];
+            
+            DOSSecretaryTravelItem *item = self.tripItems[indexPath.row];
+            
+            // Attempt to remove redundant lead in text
+            NSString *newTitle = [item.title stringByReplacingOccurrencesOfString:@"Details of Travel to the " withString:@""];
+            newTitle = [newTitle stringByReplacingOccurrencesOfString:@"Details of Travel to " withString:@""];
+            
+            cell.textLabel.text = newTitle;
+            cell.detailTextLabel.text = [NSString stringWithFormat:@"%@ - %@",[dateFormatter stringFromDate:item.dateStart],[dateFormatter stringFromDate:item.dateEnd]];
+        }
+        else {
+            cell.textLabel.text = @"Load More...";
+            cell.detailTextLabel.text = @"";
+        }
+    }
+    else
+    {
         NSDateFormatter *dateFormatter = [[NSDateFormatter alloc] init];
         [dateFormatter setDateStyle:NSDateFormatterShortStyle];
         
-        DOSSecretaryTravelItem *item = self.tripItems[indexPath.row];
-        cell.textLabel.text = item.title;
+        DOSSecretaryTravelItem *item = self.searchItems[indexPath.row];
+        
+        // Attempt to remove redundant lead in text
+        NSString *newTitle = [item.title stringByReplacingOccurrencesOfString:@"Details of Travel to the " withString:@""];
+        newTitle = [newTitle stringByReplacingOccurrencesOfString:@"Details of Travel to " withString:@""];
+        
+        cell.textLabel.text = newTitle;
         cell.detailTextLabel.text = [NSString stringWithFormat:@"%@ - %@",[dateFormatter stringFromDate:item.dateStart],[dateFormatter stringFromDate:item.dateEnd]];
-    }
-    else {
-        cell.textLabel.text = @"Load More...";
-        cell.detailTextLabel.text = @"";
     }
     
     return cell;
@@ -127,9 +176,19 @@
 {
     if ([[segue identifier] isEqualToString:@"ShowSelectedTripDetail"]) {
         
-        NSIndexPath *selectedRowIndex = [self.tableView indexPathForSelectedRow];
-        DOSTripDetailTableViewController *detailViewController = [segue destinationViewController];
-        detailViewController.parentTravelItem = self.tripItems[selectedRowIndex.row];
+        if (self.searchItems.count > 0) {
+            // Navigate to search result detail
+            NSIndexPath *selectedRowIndex = [self.searchDisplayController.searchResultsTableView indexPathForSelectedRow];
+            DOSTripDetailTableViewController *detailViewController = [segue destinationViewController];
+            detailViewController.parentTravelItem = self.searchItems[selectedRowIndex.row];
+        }
+        else {
+            // Navigate to full result detail
+            NSIndexPath *selectedRowIndex = [self.tableView indexPathForSelectedRow];
+            DOSTripDetailTableViewController *detailViewController = [segue destinationViewController];
+            detailViewController.parentTravelItem = self.tripItems[selectedRowIndex.row];
+        }
+        
         
     }
 }
