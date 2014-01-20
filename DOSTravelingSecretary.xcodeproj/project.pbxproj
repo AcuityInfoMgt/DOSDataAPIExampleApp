@@ -46,6 +46,7 @@
 		B115EC08186F1A6900002237 /* Safari~ipad.png in Resources */ = {isa = PBXBuildFile; fileRef = B115EBEE186F1A6900002237 /* Safari~ipad.png */; };
 		B115EC09186F1A6900002237 /* TUSafariActivity.m in Sources */ = {isa = PBXBuildFile; fileRef = B115EBF2186F1A6900002237 /* TUSafariActivity.m */; };
 		B1A749A6188CBC530005145A /* DOSTripStatsTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B1A749A5188CBC530005145A /* DOSTripStatsTableViewController.m */; };
+		B1A749AA188DC0050005145A /* DOSAppointmentsTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B1A749A9188DC0050005145A /* DOSAppointmentsTableViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -154,6 +155,8 @@
 		B115EBF4186F1A6900002237 /* zh_CN */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = zh_CN; path = zh_CN.lproj/TUSafariActivity.strings; sourceTree = "<group>"; };
 		B1A749A4188CBC530005145A /* DOSTripStatsTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DOSTripStatsTableViewController.h; sourceTree = "<group>"; };
 		B1A749A5188CBC530005145A /* DOSTripStatsTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DOSTripStatsTableViewController.m; sourceTree = "<group>"; };
+		B1A749A8188DC0050005145A /* DOSAppointmentsTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DOSAppointmentsTableViewController.h; sourceTree = "<group>"; };
+		B1A749A9188DC0050005145A /* DOSAppointmentsTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DOSAppointmentsTableViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -226,6 +229,8 @@
 				B115EBBA186F13E600002237 /* DOSTripDetailTableViewController.m */,
 				B1A749A4188CBC530005145A /* DOSTripStatsTableViewController.h */,
 				B1A749A5188CBC530005145A /* DOSTripStatsTableViewController.m */,
+				B1A749A8188DC0050005145A /* DOSAppointmentsTableViewController.h */,
+				B1A749A9188DC0050005145A /* DOSAppointmentsTableViewController.m */,
 				B115EBBC186F1A5000002237 /* Libraries */,
 				B115EB28186D10F300002237 /* Images.xcassets */,
 				B115EB14186D10F300002237 /* Supporting Files */,
@@ -499,6 +504,7 @@
 				B1A749A6188CBC530005145A /* DOSTripStatsTableViewController.m in Sources */,
 				B115EBFF186F1A6900002237 /* MLCruxActivity.m in Sources */,
 				B115EBBB186F13E600002237 /* DOSTripDetailTableViewController.m in Sources */,
+				B1A749AA188DC0050005145A /* DOSAppointmentsTableViewController.m in Sources */,
 				B115EBFD186F1A6900002237 /* EGYWebViewController.m in Sources */,
 				B115EB1E186D10F300002237 /* DOSAppDelegate.m in Sources */,
 				B115EBB5186F080900002237 /* DOSTripsTableViewController.m in Sources */,
