@@ -14,7 +14,6 @@
 		B115EB1A186D10F300002237 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = B115EB19186D10F300002237 /* main.m */; };
 		B115EB1E186D10F300002237 /* DOSAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = B115EB1D186D10F300002237 /* DOSAppDelegate.m */; };
 		B115EB21186D10F300002237 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B115EB1F186D10F300002237 /* Main.storyboard */; };
-		B115EB27186D10F300002237 /* DOSSecondViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B115EB26186D10F300002237 /* DOSSecondViewController.m */; };
 		B115EB29186D10F300002237 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B115EB28186D10F300002237 /* Images.xcassets */; };
 		B115EB30186D10F300002237 /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B115EB2F186D10F300002237 /* XCTest.framework */; };
 		B115EB31186D10F300002237 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B115EB0D186D10F300002237 /* Foundation.framework */; };
@@ -46,6 +45,7 @@
 		B115EC07186F1A6900002237 /* Safari@2x~ipad.png in Resources */ = {isa = PBXBuildFile; fileRef = B115EBED186F1A6900002237 /* Safari@2x~ipad.png */; };
 		B115EC08186F1A6900002237 /* Safari~ipad.png in Resources */ = {isa = PBXBuildFile; fileRef = B115EBEE186F1A6900002237 /* Safari~ipad.png */; };
 		B115EC09186F1A6900002237 /* TUSafariActivity.m in Sources */ = {isa = PBXBuildFile; fileRef = B115EBF2186F1A6900002237 /* TUSafariActivity.m */; };
+		B1A749A6188CBC530005145A /* DOSTripStatsTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B1A749A5188CBC530005145A /* DOSTripStatsTableViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -91,8 +91,6 @@
 		B115EB1C186D10F300002237 /* DOSAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DOSAppDelegate.h; sourceTree = "<group>"; };
 		B115EB1D186D10F300002237 /* DOSAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DOSAppDelegate.m; sourceTree = "<group>"; };
 		B115EB20186D10F300002237 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		B115EB25186D10F300002237 /* DOSSecondViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DOSSecondViewController.h; sourceTree = "<group>"; };
-		B115EB26186D10F300002237 /* DOSSecondViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DOSSecondViewController.m; sourceTree = "<group>"; };
 		B115EB28186D10F300002237 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		B115EB2E186D10F300002237 /* DOSTravelingSecretaryTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DOSTravelingSecretaryTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		B115EB2F186D10F300002237 /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
@@ -154,6 +152,8 @@
 		B115EBF2186F1A6900002237 /* TUSafariActivity.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TUSafariActivity.m; sourceTree = "<group>"; };
 		B115EBF3186F1A6900002237 /* vi */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = vi; path = vi.lproj/TUSafariActivity.strings; sourceTree = "<group>"; };
 		B115EBF4186F1A6900002237 /* zh_CN */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = zh_CN; path = zh_CN.lproj/TUSafariActivity.strings; sourceTree = "<group>"; };
+		B1A749A4188CBC530005145A /* DOSTripStatsTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DOSTripStatsTableViewController.h; sourceTree = "<group>"; };
+		B1A749A5188CBC530005145A /* DOSTripStatsTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DOSTripStatsTableViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -224,8 +224,8 @@
 				B115EBB4186F080900002237 /* DOSTripsTableViewController.m */,
 				B115EBB9186F13E600002237 /* DOSTripDetailTableViewController.h */,
 				B115EBBA186F13E600002237 /* DOSTripDetailTableViewController.m */,
-				B115EB25186D10F300002237 /* DOSSecondViewController.h */,
-				B115EB26186D10F300002237 /* DOSSecondViewController.m */,
+				B1A749A4188CBC530005145A /* DOSTripStatsTableViewController.h */,
+				B1A749A5188CBC530005145A /* DOSTripStatsTableViewController.m */,
 				B115EBBC186F1A5000002237 /* Libraries */,
 				B115EB28186D10F300002237 /* Images.xcassets */,
 				B115EB14186D10F300002237 /* Supporting Files */,
@@ -496,10 +496,10 @@
 				B115EB1A186D10F300002237 /* main.m in Sources */,
 				B115EC09186F1A6900002237 /* TUSafariActivity.m in Sources */,
 				B115EBF6186F1A6900002237 /* ARChromeActivity.m in Sources */,
+				B1A749A6188CBC530005145A /* DOSTripStatsTableViewController.m in Sources */,
 				B115EBFF186F1A6900002237 /* MLCruxActivity.m in Sources */,
 				B115EBBB186F13E600002237 /* DOSTripDetailTableViewController.m in Sources */,
 				B115EBFD186F1A6900002237 /* EGYWebViewController.m in Sources */,
-				B115EB27186D10F300002237 /* DOSSecondViewController.m in Sources */,
 				B115EB1E186D10F300002237 /* DOSAppDelegate.m in Sources */,
 				B115EBB5186F080900002237 /* DOSTripsTableViewController.m in Sources */,
 				B115EBFB186F1A6900002237 /* EGYModalWebViewController.m in Sources */,
