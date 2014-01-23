@@ -19,7 +19,7 @@
 		B115EB31186D10F300002237 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B115EB0D186D10F300002237 /* Foundation.framework */; };
 		B115EB32186D10F300002237 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B115EB11186D10F300002237 /* UIKit.framework */; };
 		B115EB3A186D10F300002237 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = B115EB38186D10F300002237 /* InfoPlist.strings */; };
-		B115EB3C186D10F300002237 /* DOSTravelingSecretaryTests.m in Sources */ = {isa = PBXBuildFile; fileRef = B115EB3B186D10F300002237 /* DOSTravelingSecretaryTests.m */; };
+		B115EB3C186D10F300002237 /* DOSDataAPIExampleAppTests.m in Sources */ = {isa = PBXBuildFile; fileRef = B115EB3B186D10F300002237 /* DOSDataAPIExampleAppTests.m */; };
 		B115EB4E186D127E00002237 /* libDOSDataAPI.a in Frameworks */ = {isa = PBXBuildFile; fileRef = B115EB4B186D11A900002237 /* libDOSDataAPI.a */; };
 		B115EB8C186D1D9F00002237 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B115EB86186D1D5000002237 /* SystemConfiguration.framework */; };
 		B115EBB5186F080900002237 /* DOSTripsTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B115EBB4186F080900002237 /* DOSTripsTableViewController.m */; };
@@ -97,7 +97,7 @@
 		B115EB2F186D10F300002237 /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
 		B115EB37186D10F300002237 /* DOSDataAPIExampleAppTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "DOSDataAPIExampleAppTests-Info.plist"; sourceTree = "<group>"; };
 		B115EB39186D10F300002237 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
-		B115EB3B186D10F300002237 /* DOSTravelingSecretaryTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DOSTravelingSecretaryTests.m; sourceTree = "<group>"; };
+		B115EB3B186D10F300002237 /* DOSDataAPIExampleAppTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DOSDataAPIExampleAppTests.m; sourceTree = "<group>"; };
 		B115EB45186D11A900002237 /* DOSDataAPI.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = DOSDataAPI.xcodeproj; path = DOSDataAPI/DOSDataAPI.xcodeproj; sourceTree = "<group>"; };
 		B115EB86186D1D5000002237 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
 		B115EBB3186F080900002237 /* DOSTripsTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DOSTripsTableViewController.h; sourceTree = "<group>"; };
@@ -189,8 +189,8 @@
 			isa = PBXGroup;
 			children = (
 				B115EB45186D11A900002237 /* DOSDataAPI.xcodeproj */,
-				B115EB13186D10F300002237 /* DOSTravelingSecretary */,
-				B115EB35186D10F300002237 /* DOSTravelingSecretaryTests */,
+				B115EB13186D10F300002237 /* DOSDataAPIExampleApp */,
+				B115EB35186D10F300002237 /* DOSDataAPIExampleAppTests */,
 				B115EB0C186D10F300002237 /* Frameworks */,
 				B115EB0B186D10F300002237 /* Products */,
 			);
@@ -217,7 +217,7 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
-		B115EB13186D10F300002237 /* DOSTravelingSecretary */ = {
+		B115EB13186D10F300002237 /* DOSDataAPIExampleApp */ = {
 			isa = PBXGroup;
 			children = (
 				B115EB1C186D10F300002237 /* DOSAppDelegate.h */,
@@ -235,6 +235,7 @@
 				B115EB28186D10F300002237 /* Images.xcassets */,
 				B115EB14186D10F300002237 /* Supporting Files */,
 			);
+			name = DOSDataAPIExampleApp;
 			path = DOSTravelingSecretary;
 			sourceTree = "<group>";
 		};
@@ -249,12 +250,13 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
-		B115EB35186D10F300002237 /* DOSTravelingSecretaryTests */ = {
+		B115EB35186D10F300002237 /* DOSDataAPIExampleAppTests */ = {
 			isa = PBXGroup;
 			children = (
-				B115EB3B186D10F300002237 /* DOSTravelingSecretaryTests.m */,
+				B115EB3B186D10F300002237 /* DOSDataAPIExampleAppTests.m */,
 				B115EB36186D10F300002237 /* Supporting Files */,
 			);
+			name = DOSDataAPIExampleAppTests;
 			path = DOSTravelingSecretaryTests;
 			sourceTree = "<group>";
 		};
@@ -516,7 +518,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B115EB3C186D10F300002237 /* DOSTravelingSecretaryTests.m in Sources */,
+				B115EB3C186D10F300002237 /* DOSDataAPIExampleAppTests.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

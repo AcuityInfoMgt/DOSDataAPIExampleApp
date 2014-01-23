@@ -8,11 +8,11 @@
 
 #import <XCTest/XCTest.h>
 
-@interface DOSTravelingSecretaryTests : XCTestCase
+@interface DOSDataAPIExampleAppTests : XCTestCase
 
 @end
 
-@implementation DOSTravelingSecretaryTests
+@implementation DOSDataAPIExampleAppTests
 
 - (void)setUp
 {
