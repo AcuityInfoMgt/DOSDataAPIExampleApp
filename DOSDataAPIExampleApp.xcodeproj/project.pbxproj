@@ -716,14 +716,14 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
-				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/DOSTravelingSecretary.app/DOSTravelingSecretary";
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/DOSDataAPIExampleApp.app/DOSDataAPIExampleApp";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(SDKROOT)/Developer/Library/Frameworks",
 					"$(inherited)",
 					"$(DEVELOPER_FRAMEWORKS_DIR)",
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "DOSTravelingSecretary/DOSTravelingSecretary-Prefix.pch";
+				GCC_PREFIX_HEADER = "DOSTravelingSecretary/DOSDataAPIExampleApp-Prefix.pch";
 				GCC_PREPROCESSOR_DEFINITIONS = (
 					"DEBUG=1",
 					"$(inherited)",
@@ -739,14 +739,14 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
-				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/DOSTravelingSecretary.app/DOSTravelingSecretary";
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/DOSDataAPIExampleApp.app/DOSDataAPIExampleApp";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(SDKROOT)/Developer/Library/Frameworks",
 					"$(inherited)",
 					"$(DEVELOPER_FRAMEWORKS_DIR)",
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "DOSTravelingSecretary/DOSTravelingSecretary-Prefix.pch";
+				GCC_PREFIX_HEADER = "DOSTravelingSecretary/DOSDataAPIExampleApp-Prefix.pch";
 				INFOPLIST_FILE = "DOSTravelingSecretaryTests/DOSDataAPIExampleAppTests-Info.plist";
 				PRODUCT_NAME = DOSDataAPIExampleAppTests;
 				TEST_HOST = "$(BUNDLE_LOADER)";
