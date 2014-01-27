@@ -13,11 +13,19 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
-    // Override point for customization after application launch.
+    [NSThread sleepForTimeInterval:4.0];
+    
+    // #########################################################
+    // Set UIAppearance Styles
+    // #########################################################
+    UIColor *darkBlueColor = [UIColor colorWithRed:25.0/255.0 green:95.0/255.0 blue:164.0/255.0 alpha:1.0];
+    [[UINavigationBar appearance] setTintColor:darkBlueColor];
+    [[UINavigationBar appearance] setTitleTextAttributes:@{NSForegroundColorAttributeName : darkBlueColor}];
+    [[UITabBar appearance] setTintColor:darkBlueColor];
     
     return YES;
 }
-							
+
 - (void)applicationWillResignActive:(UIApplication *)application
 {
     // Sent when the application is about to move from active to inactive state. This can occur for certain types of temporary interruptions (such as an incoming phone call or SMS message) or when the user quits the application and it begins the transition to the background state.

@@ -23,7 +23,7 @@
 {
     self.title = @"Travel Stats";
     self.tableView.allowsSelection = NO;
-    self.travelStatTitles = [NSArray arrayWithObjects:@"Hrs In Flight",@"Milage",@"Countries Visited",@"Travel Days", nil];
+    self.travelStatTitles = [NSArray arrayWithObjects:@"HOURS IN FLIGHT",@"MILES FLOWN",@"COUNTRIES VISITED",@"DAYS TRAVELED", nil];
 }
 
 - (void)viewDidLoad
@@ -71,8 +71,6 @@
         cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleValue2 reuseIdentifier:CellIdentifier];
     }
     
-    cell.textLabel.text = self.travelStatTitles[indexPath.row];
-    
     NSNumberFormatter *hrsFormatter = [[NSNumberFormatter alloc] init];
     [hrsFormatter setMaximumFractionDigits:0];
     [hrsFormatter setRoundingMode:NSNumberFormatterRoundHalfUp];
@@ -81,20 +79,24 @@
     [milageFormatter setFormatterBehavior: NSNumberFormatterBehavior10_4];
     [milageFormatter setNumberStyle: NSNumberFormatterDecimalStyle];
     
+    UILabel *statValue = (UILabel *)[cell viewWithTag:100];
+    UILabel *statTitle = (UILabel *)[cell viewWithTag:101];
+    
+    statTitle.text = self.travelStatTitles[indexPath.row];
     
     if (self.travelStats) {
         switch (indexPath.row) {
             case 0:
-                cell.detailTextLabel.text = [hrsFormatter stringFromNumber:self.travelStats.flightTimeHours];
+                statValue.text = [hrsFormatter stringFromNumber:self.travelStats.flightTimeHours];
                 break;
             case 1:
-                cell.detailTextLabel.text = [milageFormatter stringFromNumber:self.travelStats.milage];
+                statValue.text = [milageFormatter stringFromNumber:self.travelStats.milage];
                 break;
             case 2:
-                cell.detailTextLabel.text = [self.travelStats.countriesVisited stringValue];
+                statValue.text = [self.travelStats.countriesVisited stringValue];
                 break;
             case 3:
-                cell.detailTextLabel.text = [self.travelStats.travelDays stringValue];
+                statValue.text = [self.travelStats.travelDays stringValue];
                 break;
         }
     }
