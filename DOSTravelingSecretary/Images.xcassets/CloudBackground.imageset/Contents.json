@@ -2,13 +2,12 @@
   "images" : [
     {
       "idiom" : "universal",
-      "scale" : "1x",
-      "filename" : "World_Times.png"
+      "scale" : "1x"
     },
     {
       "idiom" : "universal",
       "scale" : "2x",
-      "filename" : "World_Times@2x.png"
+      "filename" : "Clouds_640x1136.png"
     }
   ],
   "info" : {

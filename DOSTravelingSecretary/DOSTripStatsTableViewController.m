@@ -24,6 +24,11 @@
     self.title = @"Travel Stats";
     self.tableView.allowsSelection = NO;
     self.travelStatTitles = [NSArray arrayWithObjects:@"HOURS IN FLIGHT",@"MILES FLOWN",@"COUNTRIES VISITED",@"DAYS TRAVELED", nil];
+    
+    // Load the background for the tableview
+    UIImage *backgroundImage = [UIImage imageNamed:@"CloudBackground"];
+    UIImageView *backgroundView = [[UIImageView alloc] initWithImage:backgroundImage];
+    self.tableView.backgroundView = backgroundView;
 }
 
 - (void)viewDidLoad

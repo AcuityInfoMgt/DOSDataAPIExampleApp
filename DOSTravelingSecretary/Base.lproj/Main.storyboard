@@ -15,8 +15,8 @@
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                     </tabBar>
                     <connections>
-                        <segue destination="914-M9-eM7" kind="relationship" relationship="viewControllers" id="Oz9-3x-7Ri"/>
                         <segue destination="A4H-MV-JVM" kind="relationship" relationship="viewControllers" id="JQi-bT-ITJ"/>
+                        <segue destination="914-M9-eM7" kind="relationship" relationship="viewControllers" id="Oz9-3x-7Ri"/>
                         <segue destination="0pd-5c-rVK" kind="relationship" relationship="viewControllers" id="xWv-GX-CER"/>
                     </connections>
                 </tabBarController>
@@ -34,7 +34,7 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <inset key="separatorInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                         <prototypes>
-                            <tableViewCell contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="TripStatCell" rowHeight="114" id="CuV-G0-Y4p">
+                            <tableViewCell opaque="NO" contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="TripStatCell" rowHeight="114" id="CuV-G0-Y4p">
                                 <rect key="frame" x="0.0" y="86" width="320" height="114"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="CuV-G0-Y4p" id="un6-Z6-eRg">
@@ -57,6 +57,7 @@
                                         </label>
                                     </subviews>
                                 </tableViewCellContentView>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                             </tableViewCell>
                         </prototypes>
                         <connections>
@@ -187,7 +188,7 @@
         <scene sceneID="iZ1-T1-QDu">
             <objects>
                 <navigationController title="Secretary Trips" automaticallyAdjustsScrollViewInsets="NO" id="914-M9-eM7" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Recent Trips" image="WorldIcon" id="u1e-5L-l1D"/>
+                    <tabBarItem key="tabBarItem" title="Recent Trips" image="PlaneIcon" id="u1e-5L-l1D"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="9qW-Px-fKQ">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
@@ -281,8 +282,8 @@
     </scenes>
     <resources>
         <image name="AppointmentIcon" width="25" height="25"/>
+        <image name="PlaneIcon" width="25" height="25"/>
         <image name="StatsIcon" width="27" height="27"/>
-        <image name="WorldIcon" width="25" height="25"/>
     </resources>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
         <simulatedStatusBarMetrics key="statusBar"/>
