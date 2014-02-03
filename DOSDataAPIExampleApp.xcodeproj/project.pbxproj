@@ -49,6 +49,7 @@
 		B1A749AA188DC0050005145A /* DOSAppointmentsTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B1A749A9188DC0050005145A /* DOSAppointmentsTableViewController.m */; };
 		B1E0E926189E9CBA00742057 /* DOSStatsPageContentViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B1E0E925189E9CBA00742057 /* DOSStatsPageContentViewController.m */; };
 		B1E0E92A189EA10A00742057 /* DOSFeaturedStatsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B1E0E929189EA10A00742057 /* DOSFeaturedStatsViewController.m */; };
+		B1E0E931189F3FA600742057 /* MBProgressHUD.m in Sources */ = {isa = PBXBuildFile; fileRef = B1E0E930189F3FA600742057 /* MBProgressHUD.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -163,6 +164,8 @@
 		B1E0E925189E9CBA00742057 /* DOSStatsPageContentViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DOSStatsPageContentViewController.m; sourceTree = "<group>"; };
 		B1E0E928189EA10A00742057 /* DOSFeaturedStatsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DOSFeaturedStatsViewController.h; sourceTree = "<group>"; };
 		B1E0E929189EA10A00742057 /* DOSFeaturedStatsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DOSFeaturedStatsViewController.m; sourceTree = "<group>"; };
+		B1E0E92F189F3FA600742057 /* MBProgressHUD.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MBProgressHUD.h; sourceTree = "<group>"; };
+		B1E0E930189F3FA600742057 /* MBProgressHUD.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MBProgressHUD.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -235,12 +238,12 @@
 				B115EBBA186F13E600002237 /* DOSTripDetailTableViewController.m */,
 				B1A749A4188CBC530005145A /* DOSTripStatsTableViewController.h */,
 				B1A749A5188CBC530005145A /* DOSTripStatsTableViewController.m */,
-				B1A749A8188DC0050005145A /* DOSAppointmentsTableViewController.h */,
-				B1A749A9188DC0050005145A /* DOSAppointmentsTableViewController.m */,
 				B1E0E928189EA10A00742057 /* DOSFeaturedStatsViewController.h */,
 				B1E0E929189EA10A00742057 /* DOSFeaturedStatsViewController.m */,
 				B1E0E924189E9CBA00742057 /* DOSStatsPageContentViewController.h */,
 				B1E0E925189E9CBA00742057 /* DOSStatsPageContentViewController.m */,
+				B1A749A8188DC0050005145A /* DOSAppointmentsTableViewController.h */,
+				B1A749A9188DC0050005145A /* DOSAppointmentsTableViewController.m */,
 				B115EBBC186F1A5000002237 /* Libraries */,
 				B115EB28186D10F300002237 /* Images.xcassets */,
 				B115EB14186D10F300002237 /* Supporting Files */,
@@ -291,6 +294,7 @@
 		B115EBBC186F1A5000002237 /* Libraries */ = {
 			isa = PBXGroup;
 			children = (
+				B1E0E92E189F3F6F00742057 /* MBProgressHUD */,
 				B115EBBD186F1A6900002237 /* ARChromeActivity */,
 				B115EBC8186F1A6900002237 /* EGYWebViewController */,
 				B115EBCE186F1A6900002237 /* MLCruxActivity */,
@@ -351,6 +355,15 @@
 				B115EBF2186F1A6900002237 /* TUSafariActivity.m */,
 			);
 			path = TUSafariActivity;
+			sourceTree = "<group>";
+		};
+		B1E0E92E189F3F6F00742057 /* MBProgressHUD */ = {
+			isa = PBXGroup;
+			children = (
+				B1E0E92F189F3FA600742057 /* MBProgressHUD.h */,
+				B1E0E930189F3FA600742057 /* MBProgressHUD.m */,
+			);
+			name = MBProgressHUD;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -523,6 +536,7 @@
 				B115EB1E186D10F300002237 /* DOSAppDelegate.m in Sources */,
 				B115EBB5186F080900002237 /* DOSTripsTableViewController.m in Sources */,
 				B115EBFB186F1A6900002237 /* EGYModalWebViewController.m in Sources */,
+				B1E0E931189F3FA600742057 /* MBProgressHUD.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

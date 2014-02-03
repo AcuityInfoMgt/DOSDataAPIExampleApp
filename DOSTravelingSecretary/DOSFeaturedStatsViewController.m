@@ -11,6 +11,7 @@
 #import "DOSDataAPI.h"
 #import "DOSSecretaryTravelDataManager.h"
 #import "DOSSecretaryTravelStatsItem.h"
+#import "MBProgressHUD.h"
 
 @interface DOSFeaturedStatsViewController ()
 
@@ -51,6 +52,7 @@
     [self.view bringSubviewToFront:self.pageControl];
     
     DOSSecretaryTravelDataManager *dataMan = [[DOSSecretaryTravelDataManager alloc] init];
+    [MBProgressHUD showHUDAddedTo:self.view animated:YES];
     [dataMan getSecretaryTravelStatsWithSuccess:^(NSArray *response) {
         
         if (response[0]) {
@@ -67,8 +69,11 @@
             [self.pageViewController setViewControllers:viewControllers direction:UIPageViewControllerNavigationDirectionForward animated:NO completion:nil];
         }
         
+        [MBProgressHUD hideHUDForView:self.view animated:YES];
+        
     } failure:^(NSError *error) {
         NSLog(@"API Query failed: %@",error);
+        [MBProgressHUD hideHUDForView:self.view animated:YES];
     }];
     
 }

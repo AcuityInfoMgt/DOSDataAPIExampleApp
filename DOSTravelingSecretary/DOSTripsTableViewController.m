@@ -11,6 +11,7 @@
 #import "DOSDataAPI.h"
 #import "DOSSecretaryTravelItem.h"
 #import "DOSSecretaryTravelDetailItem.h"
+#import "MBProgressHUD.h"
 
 @interface DOSTripsTableViewController ()
 
@@ -54,6 +55,7 @@
     [options setObject:@"id,title,date_start,date_end" forKey:DOSQueryArgFields];
     
     DOSSecretaryTravelDataManager *dataMan = [[DOSSecretaryTravelDataManager alloc] init];
+    [MBProgressHUD showHUDAddedTo:self.tableView animated:YES];
     [dataMan getSecretaryTravelWithOptions:options success:^(NSArray *response) {
         
         NSMutableArray *newItemList = [self.tripItems mutableCopy];
@@ -62,9 +64,11 @@
         self.tripItems = newItemList;
         self.totalItemsInQueryResults = dataMan.recordCountReturned;
         [self.tableView reloadData];
+        [MBProgressHUD hideHUDForView:self.tableView animated:YES];
         
     } failure:^(NSError *error) {
         NSLog(@"API Query failed: %@",error);
+        [MBProgressHUD hideHUDForView:self.tableView animated:YES];
     }];
 }
 

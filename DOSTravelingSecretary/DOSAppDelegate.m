@@ -14,7 +14,7 @@
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
     // Lengthen the display of the launch image
-    //[NSThread sleepForTimeInterval:4.0];
+    [NSThread sleepForTimeInterval:4.0];
     
     // #########################################################
     // Set UIAppearance Styles

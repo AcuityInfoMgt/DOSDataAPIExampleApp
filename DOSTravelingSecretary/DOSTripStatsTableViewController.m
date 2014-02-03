@@ -9,6 +9,7 @@
 #import "DOSTripStatsTableViewController.h"
 #import "DOSDataAPI.h"
 #import "DOSSecretaryTravelStatsItem.h"
+#import "MBProgressHUD.h"
 
 @interface DOSTripStatsTableViewController ()
 
@@ -41,6 +42,7 @@
 - (void)loadTripStats
 {
     DOSSecretaryTravelDataManager *dataMan = [[DOSSecretaryTravelDataManager alloc] init];
+    [MBProgressHUD showHUDAddedTo:self.tableView animated:YES];
     [dataMan getSecretaryTravelStatsWithSuccess:^(NSArray *response) {
         
         if (response[0]) {
@@ -48,9 +50,11 @@
         }
         
         [self.tableView reloadData];
+        [MBProgressHUD hideHUDForView:self.tableView animated:YES];
         
     } failure:^(NSError *error) {
         NSLog(@"API Query failed: %@",error);
+        [MBProgressHUD hideHUDForView:self.tableView animated:YES];
     }];
 }
 
