@@ -13,7 +13,8 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
-    [NSThread sleepForTimeInterval:4.0];
+    // Lengthen the display of the launch image
+    //[NSThread sleepForTimeInterval:4.0];
     
     // #########################################################
     // Set UIAppearance Styles
@@ -22,6 +23,11 @@
     [[UINavigationBar appearance] setTintColor:darkBlueColor];
     [[UINavigationBar appearance] setTitleTextAttributes:@{NSForegroundColorAttributeName : darkBlueColor}];
     [[UITabBar appearance] setTintColor:darkBlueColor];
+    
+    UIPageControl *pageControl = [UIPageControl appearance];
+    pageControl.pageIndicatorTintColor = [UIColor lightGrayColor];
+    pageControl.currentPageIndicatorTintColor = [UIColor whiteColor];
+    pageControl.backgroundColor = [UIColor clearColor];
     
     return YES;
 }
