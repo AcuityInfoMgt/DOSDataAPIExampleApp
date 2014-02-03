@@ -108,6 +108,11 @@
 {
     if (self.targetDistance > self.currentlyDisplayedDistance) {
         self.currentlyDisplayedDistance += 0.01;
+        
+        // Increment DC to London faster since the metric is larger
+        if (self.pageIndex == 0) {
+            self.currentlyDisplayedDistance += 0.04;
+        }
     }
     else
     {
