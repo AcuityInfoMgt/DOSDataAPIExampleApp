@@ -69,6 +69,8 @@
     } failure:^(NSError *error) {
         NSLog(@"API Query failed: %@",error);
         [MBProgressHUD hideHUDForView:self.tableView animated:YES];
+        UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Network Error" message:@"Unable to connect to www.state.gov" delegate:nil cancelButtonTitle:@"OK" otherButtonTitles:nil];
+        [alert show];
     }];
 }
 

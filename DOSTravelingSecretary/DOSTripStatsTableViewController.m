@@ -36,11 +36,13 @@
 {
     [super viewDidLoad];
     [self loadTripStats];
-    
 }
 
 - (void)loadTripStats
 {
+    // Load cached data from disk
+    [self loadStatsFromPlist];
+    
     DOSSecretaryTravelDataManager *dataMan = [[DOSSecretaryTravelDataManager alloc] init];
     [MBProgressHUD showHUDAddedTo:self.tableView animated:YES];
     [dataMan getSecretaryTravelStatsWithSuccess:^(NSArray *response) {
@@ -50,14 +52,59 @@
         }
         
         [self.tableView reloadData];
+        [self saveStatsToPlist];
         [MBProgressHUD hideHUDForView:self.tableView animated:YES];
         
     } failure:^(NSError *error) {
         NSLog(@"API Query failed: %@",error);
         [MBProgressHUD hideHUDForView:self.tableView animated:YES];
+        UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Network Error" message:@"Unable to connect to www.state.gov" delegate:nil cancelButtonTitle:@"OK" otherButtonTitles:nil];
+        [alert show];
     }];
 }
 
+-(void)saveStatsToPlist
+{
+    // Convert stats object to NSDictionary
+    NSMutableDictionary *statsDict = [[NSMutableDictionary alloc] init];
+    [statsDict setObject:self.travelStats.flightTimeHours forKey:@"flightTimeHours"];
+    [statsDict setObject:self.travelStats.milage forKey:@"milage"];
+    [statsDict setObject:self.travelStats.countriesVisited forKey:@"countriesVisited"];
+    [statsDict setObject:self.travelStats.travelDays forKey:@"travelDays"];
+    
+    // Save to disk
+    NSString *statsPath = [self getSavedStatsPath];
+    [statsDict writeToFile:statsPath atomically:YES];
+}
+
+-(void)loadStatsFromPlist
+{
+    // Save to disk
+    NSString *statsPath = [self getSavedStatsPath];
+    NSFileManager *manager = [NSFileManager defaultManager];
+    BOOL isExist = [manager fileExistsAtPath:statsPath];
+    
+    if (isExist) {
+        NSDictionary *statsDict = [NSDictionary dictionaryWithContentsOfFile:statsPath];
+        
+        DOSSecretaryTravelStatsItem *stats = [[DOSSecretaryTravelStatsItem alloc] init];
+        stats.flightTimeHours = [statsDict objectForKey:@"flightTimeHours"];
+        stats.milage = [statsDict objectForKey:@"milage"];
+        stats.countriesVisited = [statsDict objectForKey:@"countriesVisited"];
+        stats.travelDays = [statsDict objectForKey:@"travelDays"];
+        self.travelStats = stats;
+        [self.tableView reloadData];
+    }
+}
+
+-(NSString *)getSavedStatsPath
+{
+    NSArray *paths = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES);
+    NSString *documentsDir = [paths objectAtIndex:0];
+    NSString *documentDirPath = [documentsDir
+                                 stringByAppendingPathComponent:@"TravelStats.plist"];
+    return documentDirPath;
+}
 
 #pragma mark - Table view data source
 

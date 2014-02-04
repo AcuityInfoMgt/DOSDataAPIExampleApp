@@ -51,32 +51,66 @@
     self.pageControl.backgroundColor = [UIColor clearColor];
     [self.view bringSubviewToFront:self.pageControl];
     
-    DOSSecretaryTravelDataManager *dataMan = [[DOSSecretaryTravelDataManager alloc] init];
-    [MBProgressHUD showHUDAddedTo:self.view animated:YES];
-    [dataMan getSecretaryTravelStatsWithSuccess:^(NSArray *response) {
-        
-        if (response[0]) {
-            DOSSecretaryTravelStatsItem *travelStats = response[0];
-            NSNumberFormatter* milageFormatter = [[NSNumberFormatter alloc] init];
-            [milageFormatter setFormatterBehavior: NSNumberFormatterBehavior10_4];
-            [milageFormatter setNumberStyle: NSNumberFormatterDecimalStyle];
-            self.totalMilage = travelStats.milage;
-            self.totalMilageText = [milageFormatter stringFromNumber:travelStats.milage];
-            
-            // Create the initial view
-            DOSStatsPageContentViewController *startingViewController = [self viewControllerAtIndex:0];
-            NSArray *viewControllers = @[startingViewController];
-            [self.pageViewController setViewControllers:viewControllers direction:UIPageViewControllerNavigationDirectionForward animated:NO completion:nil];
-        }
-        
-        [MBProgressHUD hideHUDForView:self.view animated:YES];
-        
-    } failure:^(NSError *error) {
-        NSLog(@"API Query failed: %@",error);
-        [MBProgressHUD hideHUDForView:self.view animated:YES];
-    }];
+    // Load the mileage data
+    [self loadMileageFromPlist];
     
+    // Create the initial view
+    DOSStatsPageContentViewController *startingViewController = [self viewControllerAtIndex:0];
+    NSArray *viewControllers = @[startingViewController];
+    [self.pageViewController setViewControllers:viewControllers direction:UIPageViewControllerNavigationDirectionForward animated:NO completion:nil];
+
 }
+
+- (void)loadMileageFromPlist
+{
+    // Save to disk
+    NSString *statsPath = [self getSavedStatsPath];
+    NSFileManager *manager = [NSFileManager defaultManager];
+    BOOL isExist = [manager fileExistsAtPath:statsPath];
+    
+    NSNumberFormatter* milageFormatter = [[NSNumberFormatter alloc] init];
+    [milageFormatter setFormatterBehavior: NSNumberFormatterBehavior10_4];
+    [milageFormatter setNumberStyle: NSNumberFormatterDecimalStyle];
+    
+    if (isExist) {
+        NSDictionary *statsDict = [NSDictionary dictionaryWithContentsOfFile:statsPath];
+        self.totalMilage = [statsDict objectForKey:@"milage"];
+        self.totalMilageText = [milageFormatter stringFromNumber:self.totalMilage];
+    }
+    else
+    {
+        // plist doesn't exist, query webservice
+        DOSSecretaryTravelDataManager *dataMan = [[DOSSecretaryTravelDataManager alloc] init];
+        [MBProgressHUD showHUDAddedTo:self.view animated:YES];
+        [dataMan getSecretaryTravelStatsWithSuccess:^(NSArray *response) {
+            if (response[0]) {
+                DOSSecretaryTravelStatsItem *travelStats = response[0];
+                NSNumberFormatter* milageFormatter = [[NSNumberFormatter alloc] init];
+                [milageFormatter setFormatterBehavior: NSNumberFormatterBehavior10_4];
+                [milageFormatter setNumberStyle: NSNumberFormatterDecimalStyle];
+                self.totalMilage = travelStats.milage;
+                self.totalMilageText = [milageFormatter stringFromNumber:travelStats.milage];
+            }
+            [MBProgressHUD hideHUDForView:self.view animated:YES];
+            
+        } failure:^(NSError *error) {
+            NSLog(@"API Query failed: %@",error);
+            [MBProgressHUD hideHUDForView:self.view animated:YES];
+            UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Network Error" message:@"Unable to connect to www.state.gov" delegate:nil cancelButtonTitle:@"OK" otherButtonTitles:nil];
+            [alert show];
+        }];
+    }
+}
+
+-(NSString *)getSavedStatsPath
+{
+    NSArray *paths = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES);
+    NSString *documentsDir = [paths objectAtIndex:0];
+    NSString *documentDirPath = [documentsDir
+                                 stringByAppendingPathComponent:@"TravelStats.plist"];
+    return documentDirPath;
+}
+
 
 - (DOSStatsPageContentViewController *)viewControllerAtIndex:(NSUInteger)index
 {
