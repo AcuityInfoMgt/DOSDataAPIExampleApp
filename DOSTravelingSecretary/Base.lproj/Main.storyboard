@@ -300,13 +300,13 @@
                                 </items>
                             </navigationBar>
                             <pageControl opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" numberOfPages="3" translatesAutoresizingMaskIntoConstraints="NO" id="VUu-69-aSk">
-                                <rect key="frame" x="141" y="475" width="39" height="37"/>
+                                <rect key="frame" x="141" y="483" width="39" height="37"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </pageControl>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstAttribute="bottom" secondItem="VUu-69-aSk" secondAttribute="bottom" constant="56" id="7my-TO-jhq"/>
+                            <constraint firstAttribute="bottom" secondItem="VUu-69-aSk" secondAttribute="bottom" constant="48" id="7my-TO-jhq"/>
                         </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="Distance Traveled" image="FeaturedStatsIcon" id="Dud-pZ-zn7"/>
@@ -345,8 +345,8 @@
                                 <rect key="frame" x="0.0" y="0.0" width="320" height="454"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
-                            <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Rs8-ww-fv3">
-                                <rect key="frame" x="0.0" y="282" width="320" height="125"/>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Rs8-ww-fv3">
+                                <rect key="frame" x="0.0" y="300" width="320" height="125"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <subviews>
                                     <view alpha="0.65000000000000002" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="PNt-bP-YJc">

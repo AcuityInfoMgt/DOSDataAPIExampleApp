@@ -60,6 +60,9 @@
         [MBProgressHUD hideHUDForView:self.tableView animated:YES];
         UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Network Error" message:@"Unable to connect to www.state.gov" delegate:nil cancelButtonTitle:@"OK" otherButtonTitles:nil];
         [alert show];
+        
+        // Reload table to show data saved from plist
+        [self.tableView reloadData];
     }];
 }
 
