@@ -24,11 +24,12 @@ The Select State.gov Data iOS SDK Example App is provided under the MIT License.
 
 This application uses image assets from the following sources:
 
-* [PixelLove.com](http://www.pixellove.com)
-* [VisualPharm](http://www.visualpharm.com)
-* [Andrew Dunn](http://www.andrewdunnphoto.com)
 * [State.gov](http://www.state.gov)
 * [NASA.gov](http://www.nasa.gov)
+* [Andrew Dunn](http://www.andrewdunnphoto.com)
+* [PixelLove.com](http://www.pixellove.com)
+* [VisualPharm](http://www.visualpharm.com)
+
 
 
 
