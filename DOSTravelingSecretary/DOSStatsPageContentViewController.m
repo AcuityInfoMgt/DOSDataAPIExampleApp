@@ -3,7 +3,7 @@
 //  DOSDataAPIExampleApp
 //
 //  Created by Kevin Ferrell on 2/2/14.
-//  Copyright (c) 2014 Acuity Inc. All rights reserved.
+//  Copyright (c) 2014 Acuity Inc.
 //
 
 #import "DOSStatsPageContentViewController.h"
