@@ -59,10 +59,10 @@
     // Set the background color
     switch (self.pageIndex) {
         case 0:
-            self.textBackgroundColor.alpha = 0.70;
+            self.textBackgroundColor.alpha = darkBackgroundAlpha;
             break;
         case 1:
-            self.textBackgroundColor.alpha = darkBackgroundAlpha;
+            self.textBackgroundColor.alpha = 0.70;
             break;
         case 2:
             self.textBackgroundColor.alpha = darkBackgroundAlpha;
@@ -84,10 +84,10 @@
     float speedFactor = 200.0;
     switch (self.pageIndex) {
         case 0:
-            speedFactor = 2000.0;
+            speedFactor = 500.0;
             break;
         case 1:
-            speedFactor = 200.0;
+            speedFactor = 2000.0;
             break;
         case 2:
             speedFactor = 100.0;
@@ -110,7 +110,7 @@
         self.currentlyDisplayedDistance += 0.01;
         
         // Increment DC to London faster since the metric is larger
-        if (self.pageIndex == 0) {
+        if (self.pageIndex == 1) {
             self.currentlyDisplayedDistance += 0.04;
         }
     }

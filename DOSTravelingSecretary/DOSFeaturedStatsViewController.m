@@ -27,9 +27,9 @@
     [super viewDidLoad];
 	
     // Create the data model
-    self.pageStatText = [NSArray arrayWithObjects:@"TRIPS FROM D.C. TO LONDON",@"TRIPS AROUND THE EQUATOR OF EARTH",@"TRIPS FROM D.C. TO THE MOON", nil];
-    self.pageBackgroundImages = [NSArray arrayWithObjects:@"BigBen",@"Earth",@"Moon", nil];
-    self.divisionFactors = [NSArray arrayWithObjects:[NSNumber numberWithFloat:3662.0],[NSNumber numberWithFloat:24901.55],[NSNumber numberWithFloat:238855.0], nil];
+    self.pageStatText = [NSArray arrayWithObjects:@"TRIPS AROUND THE EQUATOR OF EARTH",@"EQUIVALENT TRIPS FROM D.C. TO LONDON",@"TRIPS FROM EARTH TO THE MOON", nil];
+    self.pageBackgroundImages = [NSArray arrayWithObjects:@"Earth",@"BigBen",@"Moon", nil];
+    self.divisionFactors = [NSArray arrayWithObjects:[NSNumber numberWithFloat:24901.55],[NSNumber numberWithFloat:3662.0],[NSNumber numberWithFloat:238855.0], nil];
     
     // Create page view controller
     self.pageViewController = [self.storyboard instantiateViewControllerWithIdentifier:@"FeaturedStatsPageViewController"];
@@ -106,8 +106,7 @@
 {
     NSArray *paths = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES);
     NSString *documentsDir = [paths objectAtIndex:0];
-    NSString *documentDirPath = [documentsDir
-                                 stringByAppendingPathComponent:@"TravelStats.plist"];
+    NSString *documentDirPath = [documentsDir stringByAppendingPathComponent:@"TravelStats.plist"];
     return documentDirPath;
 }
 
