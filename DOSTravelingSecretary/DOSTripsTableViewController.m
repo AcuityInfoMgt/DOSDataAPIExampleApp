@@ -39,6 +39,10 @@
 {
     [super viewDidLoad];
     [self loadTripDataset];
+    
+    UIRefreshControl *pullToRefreshControl = [[UIRefreshControl alloc] init];
+    [pullToRefreshControl addTarget:self action:@selector(loadTripDataset) forControlEvents:UIControlEventValueChanged];
+    self.refreshControl = pullToRefreshControl;
 }
 
 - (BOOL)searchDisplayController:(UISearchDisplayController *)controller shouldReloadTableForSearchString:(NSString *)searchString
@@ -55,7 +59,7 @@
     [options setObject:@"id,title,date_start,date_end" forKey:DOSQueryArgFields];
     
     DOSSecretaryTravelDataManager *dataMan = [[DOSSecretaryTravelDataManager alloc] init];
-    [MBProgressHUD showHUDAddedTo:self.view animated:YES];
+    [MBProgressHUD showHUDAddedTo:self.navigationController.view animated:YES];
     [dataMan getSecretaryTravelWithOptions:options success:^(NSArray *response) {
         
         NSMutableArray *newItemList = [self.tripItems mutableCopy];
@@ -64,11 +68,13 @@
         self.tripItems = newItemList;
         self.totalItemsInQueryResults = dataMan.recordCountReturned;
         [self.tableView reloadData];
-        [MBProgressHUD hideHUDForView:self.view animated:YES];
+        [self.refreshControl endRefreshing];
+        [MBProgressHUD hideHUDForView:self.navigationController.view animated:YES];
         
     } failure:^(NSError *error) {
         NSLog(@"API Query failed: %@",error);
-        [MBProgressHUD hideHUDForView:self.view animated:YES];
+        [MBProgressHUD hideHUDForView:self.navigationController.view animated:YES];
+        [self.refreshControl endRefreshing];
         UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Network Error" message:@"Unable to connect to www.state.gov" delegate:nil cancelButtonTitle:@"OK" otherButtonTitles:nil];
         [alert show];
     }];

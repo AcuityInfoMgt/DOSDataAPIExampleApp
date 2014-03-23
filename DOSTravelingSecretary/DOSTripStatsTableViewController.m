@@ -23,6 +23,7 @@
 - (void)awakeFromNib
 {
     self.title = @"Travel Stats";
+    self.navigationItem.title = @"Secretary Kerry's Travel Stats";
     self.tableView.allowsSelection = NO;
     self.travelStatTitles = [NSArray arrayWithObjects:@"HOURS IN FLIGHT",@"MILES FLOWN",@"COUNTRIES VISITED",@"DAYS TRAVELED", nil];
     
@@ -44,7 +45,7 @@
     [self loadStatsFromPlist];
     
     DOSSecretaryTravelDataManager *dataMan = [[DOSSecretaryTravelDataManager alloc] init];
-    [MBProgressHUD showHUDAddedTo:self.tableView animated:YES];
+    [MBProgressHUD showHUDAddedTo:self.navigationController.view animated:YES];
     [dataMan getSecretaryTravelStatsWithSuccess:^(NSArray *response) {
         
         if (response[0]) {
@@ -53,11 +54,11 @@
         
         [self.tableView reloadData];
         [self saveStatsToPlist];
-        [MBProgressHUD hideHUDForView:self.tableView animated:YES];
+        [MBProgressHUD hideHUDForView:self.navigationController.view animated:YES];
         
     } failure:^(NSError *error) {
         NSLog(@"API Query failed: %@",error);
-        [MBProgressHUD hideHUDForView:self.tableView animated:YES];
+        [MBProgressHUD hideHUDForView:self.navigationController.view animated:YES];
         UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Network Error" message:@"Unable to connect to www.state.gov" delegate:nil cancelButtonTitle:@"OK" otherButtonTitles:nil];
         [alert show];
         
