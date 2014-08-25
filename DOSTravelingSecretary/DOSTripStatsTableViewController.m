@@ -134,6 +134,8 @@
     NSNumberFormatter *hrsFormatter = [[NSNumberFormatter alloc] init];
     [hrsFormatter setMaximumFractionDigits:0];
     [hrsFormatter setRoundingMode:NSNumberFormatterRoundHalfUp];
+    [hrsFormatter setFormatterBehavior: NSNumberFormatterBehavior10_4];
+    [hrsFormatter setNumberStyle: NSNumberFormatterDecimalStyle];
     
     NSNumberFormatter* milageFormatter = [[NSNumberFormatter alloc] init];
     [milageFormatter setFormatterBehavior: NSNumberFormatterBehavior10_4];
